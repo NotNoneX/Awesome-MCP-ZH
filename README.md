@@ -276,6 +276,8 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [memtrace](https://github.com/syncable-dev/memtrace-public) | 面向编码代理的结构化内存层，通过 AST 构建双时态知识图谱，为 Claude、Cursor 等 MCP 客户端提供低延迟代码理解与检索能力。 | 社区实现，Rust 核心 🦀，MCP 服务 ☁️，代码智能与代理记忆。 | 
 | [ozgurcd/gograph](https://github.com/ozgurcd/gograph) | 纯本地的 Go 静态分析引擎，内置 MCP 服务器，为 AI 编程代理提供确定性的结构感知：调用图、影响分析、符号搜索等。 | 社区实现, Go 开发 🏎️, 本地运行 🏠, Go 调用图与影响分析。 |
 | [lightbearco/tupper](https://github.com/lightbearco/tupper) | 面向 AI 代理的开源沙箱，在本机安全运行不受信任的 AI 生成代码、Shell 命令与文件读写。基于 Apple Containers，提供 E2B 风格的 TypeScript SDK，内置 MCP 服务器、CLI 与 HTTP API（macOS 用 Apple Containers，Linux/Windows 经 Firecracker/WSL）。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, macOS 🍎, 自托管代码执行沙箱, MIT。 |
+| [mybolide/mcp-probe-kit](https://github.com/mybolide/mcp-probe-kit) | 规格驱动的通用开发工作流 MCP（30 工具）：`start_feature` / `start_bugfix` / `start_ui` 编排全流程，自动 Skill + AGENTS.md bootstrap，跨项目向量记忆（Qdrant），GitNexus 代码图谱，规格校验与质量闸门。任意 MCP 客户端可用。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 跨平台 🍎🪟🐧, 工作流编排 + 记忆, MIT, `npx -y mcp-probe-kit@latest`。 |
+| [Necmttn/ax](https://github.com/Necmttn/ax) | 本地优先的 AI 编程代理遥测与召回图谱，可通过 MCP 查询 Claude Code、Codex、Cursor、OpenCode、Pi 的会话、工具调用、技能和成本数据。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, SurrealDB 存储, 编码代理可观测性与工作流复盘, AGPL-3.0。 |
 
 
 ---
@@ -487,6 +489,7 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [MLT-OSS/FirstData](https://github.com/MLT-OSS/FirstData) | 全球最全面的权威数据源知识库，132+ 经验证数据源（政府、国际组织、学术机构），帮助 AI 减少幻觉。提供结构化元数据、100% URL 验证、中英双语支持。目标：1000+ 数据源。 | 本地/云端 🏠☁️，中国数据源深度覆盖 🇨🇳，AI 事实防线，抗幻觉数据底座。 |
 | [GEOScore](https://github.com/henu-wang/geoscore-mcp) | AI 搜索优化（GEO）MCP 服务器。扫描网站的 AI 搜索就绪度，生成 llms.txt、Schema.org 修复、meta 标签优化。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 支持 Claude/Cursor/Windsurf。 |
 | [Episkey-G/GrokSearch-rs](https://github.com/Episkey-G/GrokSearch-rs) | Rust 编写的 MCP 服务器，提供 Grok 联网搜索与 Tavily 支持的来源检索，为 AI 代理补充实时网络信息。 | 社区实现, Rust 开发 🦀, 云服务 ☁️, Grok 联网搜索 + Tavily 检索。 |
+| [NovadaLabs/Novada-mcp](https://github.com/NovadaLabs/Novada-mcp) | 托管 Streamable-HTTP MCP 服务器，提供 25+ 网页数据工具：搜索、SERP、抓取、提取、地图、爬取、深度研究及 6 种代理类型，覆盖 195 个国家。免安装，每月 1000 次免费调用。`npx novada-mcp` | 社区实现, TypeScript 开发 📇, 云服务 ☁️, 全面网页数据采集平台, MIT。 |
 
 ---
 
@@ -528,10 +531,11 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [team-telnyx/telnyx-mcp-server](https://github.com/team-telnyx/telnyx-mcp-server) | Telnyx 官方 MCP 服务器，用于构建 AI 驱动的通信应用。创建语音助手、发送短信、管理电话号码、集成实时消息。 | 官方实现 (Telnyx) 🎖️, Python 开发 🐍, 云服务 ☁️, 电话/短信/AI 语音助手。 |
 | [userad/didlogic_mcp](https://github.com/UserAd/didlogic_mcp)          | DIDLogic MCP 服务器。增加管理 SIP 端点、号码和目的地的功能。                              | 社区实现, Python 开发 🐍, 云服务 ☁️, DIDLogic (VoIP) 集成。                               |
 | [X (Twitter) (by vidhupv)](https://github.com/vidhupv/x-mcp)         | 直接通过 Claude 创建、管理和发布 X/Twitter 推文。                                            | 社区实现, Python 开发, Twitter 发推管理。                                                 |
-| [Xquik](https://github.com/Xquik-dev/x-twitter-scraper) | X/Twitter 数据平台 — MCP 服务器（StreamableHTTP 传输），76 个 REST API 端点，20 个批量提取工具，账户监控，抽奖系统。 | 社区实现, TypeScript 开发 📇, 云服务 ☁️, X/Twitter 数据提取与分析。 |
+| [Xquik](https://github.com/Xquik-dev/x-twitter-scraper) | X/Twitter 数据平台，提供远程 MCP、REST API、Webhooks、批量提取、账号监控与抽奖工作流。 | 官方实现 (Xquik) 🎖️, TypeScript 开发 📇, 云服务 ☁️, StreamableHTTP, 2 个 MCP 工具, 100+ REST API 端点。 |
 | [VibeMarketing](https://vibemarketing.ninja/mcp) | X/Twitter 和 LinkedIn 社交媒体调度工具，支持 AI 驱动的内容生成。OAuth 身份验证，计划发布，账户管理，订阅跟踪。 | 远程 MCP 服务器 ☁️，社交媒体营销自动化。 |
 | [Google Tasks (by zcaceres)](https://github.com/zcaceres/gtasks-mcp)   | Google Tasks API 服务器。                                                                   | 社区实现, TypeScript 开发 📇, 云服务 ☁️, Google Tasks 管理 (TS)。                        |
 | [Nylas CLI](https://github.com/nylas/cli) | 邮件、日历和联系人 MCP 服务器。一次身份验证即可覆盖 Gmail、Outlook、Exchange、Yahoo、iCloud 和 IMAP 共六大邮件服务商的 16 个工具。`nylas mcp install` 一键安装。 | 官方实现 (Nylas) 🎖️, Go 开发 🏎️, 云服务 ☁️, 跨平台 🍎🪟🐧, 邮件/日历/联系人统一接入。文档：https://cli.nylas.com |
+| [TwitterAPI.io MCP Server](https://github.com/kaitoInfra/twitterapi-io-mcp-server) | 对接 twitterapi.io（Twitter/X 数据 API）的官方 MCP 服务器。12 个只读工具：推文搜索（支持完整搜索操作符）、用户档案、关注者、对话线程、趋势话题、互动指标。npm `@twitterapi_io/mcp-server`。 | 官方实现 🎖️, TypeScript 开发 📇, 云服务 ☁️, X/Twitter 数据 API 集成。 |
 
 ---
 
@@ -649,6 +653,7 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [JSON](https://github.com/GongRzhe/JSON-MCP-Server)                  | JSON 处理服务器，支持 JSONPath 查询和多种操作。                                                            | 社区实现, Python 开发, 高级 JSON 处理。                                                                 |
 | [zcaceres/markdownify-mcp](https://github.com/zcaceres/markdownify-mcp) | 将几乎任何文件或 Web 内容转换为 Markdown 的 MCP 服务器。                                          | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 文件/网页转 Markdown。                                      |
 | [shmlkv/dna-claude-analysis](https://github.com/shmlkv/dna-claude-analysis) | 使用 Claude Code 构建的个人基因组分析工具包，支持 17 个类别的 DNA 数据分析并生成可视化报告。              | 社区实现, Python 开发 🐍, 本地运行 🏠, 基因组数据分析与可视化。                                        |
+| [lingion/plot-mcp-worker](https://github.com/lingion/plot-mcp-worker) | Cloudflare Workers 上的 MCP 图表引擎：函数绘图、力分析图、电路图、3D 几何、Venn 图、STEM 教学模板。CJK 字体文本转路径管线（GB2312 6763 字），渲染无字体依赖。 | 社区实现, TypeScript 开发 📇, 云服务 ☁️ (Cloudflare Workers), STEM 可视化, CC BY-NC-SA 4.0。 |
 
 ---
 
@@ -799,6 +804,12 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [atomicstrata/atomicmemory](https://github.com/atomicstrata/atomicmemory)        | 面向 AI 代理的可移植语义记忆，包含核心引擎、TypeScript SDK、框架适配器、MCP 服务器、CLI 和宿主插件，让记忆在不同工具间复用。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 可移植语义记忆 (引擎 + SDK + MCP)。 |
 | [nikhilkagita04/continuum](https://github.com/nikhilkagita04/continuum) | 把整个桌面上下文（看过、读过、输入过、听到的一切）汇成单一 MCP，供 Agent 理解你的工作方式。本地优先、设备端运行：对焦点窗口做 OCR、可选会议转录，并提炼长期偏好，让 Claude/Cursor 等随时知道“你刚才在某 App 里做了什么”。 | 社区实现, JavaScript 开发 📇, 本地运行 🏠, 设备端桌面上下文记忆 (recall/catch_up/profile)。 |
 | [uudam42/agent-memory-engine](https://github.com/uudam42/agent-memory-engine) | 面向编码 Agent 的本地优先持久记忆与项目知识运行时。维护证据支撑的结构化记忆树（约束/架构/决策/故障/流程），复杂任务前自动按意图召回相关上下文，任务后反思并据置信度决定是否留存。SQLite FTS5 检索、分支感知记忆、统一 ContextPack（token 预算），数据全留在 `.memory-engine/`、无云调用。 | 社区实现, Python 开发 🐍, 本地运行 🏠, 证据支撑的结构化记忆树 + 分支感知召回, MIT。 |
+| [samvallad33/vestige](https://github.com/samvallad33/vestige) | 面向 AI 编程代理的本地优先认知记忆 MCP 服务器（25 工具），SQLite 存储，支持 FSRS 风格保持度、混合检索、记忆校正、来源追踪和可视化仪表盘。 | 社区实现, Rust 开发 🦀, 本地运行 🏠, 跨平台 🍎🪟🐧, npm: `vestige-mcp-server`, AGPL-3.0, 565+ Stars。 |
+| [EGC](https://github.com/Fmarzochi/EGC) | 跨会话持久记忆 MCP 服务，支持 Claude Code、Cursor、Gemini CLI、Codex、Windsurf 等多种 AI 编程工具，SQLite 本地存储，上下文重置后状态保持。提供 egc-memory（14 工具）与 egc-guardian（5 工具）。`npm install -g @egchq/egc` | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 跨工具状态同步, MIT。 |
+| [llmtrim](https://github.com/fkiene/llmtrim) | 在请求发往 LLM 前压缩提示词、对话历史、工具输出和代码以降低 token 成本，带质量门控、不改变回答。MCP server 提供 `llmtrim_compress`、`llmtrim_compress_text`、`llmtrim_stats` 三个工具；也可作为本地代理、CLI 或库使用。 | 社区实现, Rust 开发 🦀, 本地运行 🏠, 提示词/Token 压缩与质量门控, MPL-2.0。 |
+| [Beever Atlas](https://github.com/Beever-AI/beever-atlas) | 开源团队知识库，内建 MCP 服务器。Neo4j 类型化知识图谱 + Weaviate 向量数据库，支持 Slack/Discord/Teams 等对话导入，通过 LiteLLM 自选 LLM。 | 社区实现, Python 开发 🐍, 本地运行 🏠, Neo4j 知识图谱 + Weaviate 向量搜索, Apache 2.0。 |
+| [Agentage Memory](https://memory.agentage.io) | 跨厂商共享记忆层：一份你拥有的 Markdown 记忆，Claude / Cursor / ChatGPT 都能通过 MCP 读写，并本地镜像为纯 `.md` 文件可随时导出。提供 6 个工具（`memory__search/read/write/edit/list/delete`）。 | 官方实现 (agentage) 🎖️, TypeScript 开发 📇, 云服务 ☁️, 远程 MCP (Streamable HTTP)，端点 `memory.agentage.io/mcp`，OAuth 2.1 + PKCE。 |
+| [Goldentrii/AgentRecall](https://github.com/Goldentrii/AgentRecall) | 跨会话的持久化累积记忆系统，使用智能距离协议召回最相关历史记忆。提供 5 个工具：`session_start`、`remember`、`recall`、`check`、`session_end`。`npx agent-recall-mcp` | 社区实现, TypeScript 开发 📇, 本地/云端 🏠☁️, 智能距离协议记忆召回, MIT。 |
 
 ---
 
@@ -975,6 +986,7 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [zueai/mcp-manager](https://github.com/zueai/mcp-manager)                    | 用于安装和管理 Claude Desktop App 的 MCP 服务器的简单 Web UI。                                      | 社区实现, TypeScript 开发 📇, 云服务 ☁️, MCP 服务器管理 Web UI。                                     |
 | [HenryHaoson/Yuque-MCP-Server](https://github.com/HenryHaoson/Yuque-MCP-Server)  | 用于集成语雀 API 的 MCP 服务器，允许 AI 模型管理文档、与知识库交互、搜索内容和访问语雀平台的分析数据。       | 社区实现, TypeScript 开发 📇, 云服务 ☁️, 语雀 API 集成。                                         |
 | [ttommyth/interactive-mcp](https://github.com/ttommyth/interactive-mcp) | 通过在 MCP 循环中直接添加本地用户提示和聊天功能，实现交互式 LLM 工作流。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 人机交互工作流。 |
+| [GCF Proxy](https://github.com/blackwell-systems/gcf-proxy) | MCP 工具响应压缩代理。零代码接入，将任意 MCP 服务器的 JSON-RPC 响应自动转换为紧凑的 GCF 格式以节省 token，支持 JSON、YAML、TOML、CSV、MessagePack 多种格式。 | 社区实现, Go/Python/Node 开发 🏎️🐍📇, 本地运行 🏠, MIT 许可, token 优化。 |
 
 ---
 
