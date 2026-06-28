@@ -278,6 +278,8 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [lightbearco/tupper](https://github.com/lightbearco/tupper) | 面向 AI 代理的开源沙箱，在本机安全运行不受信任的 AI 生成代码、Shell 命令与文件读写。基于 Apple Containers，提供 E2B 风格的 TypeScript SDK，内置 MCP 服务器、CLI 与 HTTP API（macOS 用 Apple Containers，Linux/Windows 经 Firecracker/WSL）。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, macOS 🍎, 自托管代码执行沙箱, MIT。 |
 | [mybolide/mcp-probe-kit](https://github.com/mybolide/mcp-probe-kit) | 规格驱动的通用开发工作流 MCP（30 工具）：`start_feature` / `start_bugfix` / `start_ui` 编排全流程，自动 Skill + AGENTS.md bootstrap，跨项目向量记忆（Qdrant），GitNexus 代码图谱，规格校验与质量闸门。任意 MCP 客户端可用。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 跨平台 🍎🪟🐧, 工作流编排 + 记忆, MIT, `npx -y mcp-probe-kit@latest`。 |
 | [Necmttn/ax](https://github.com/Necmttn/ax) | 本地优先的 AI 编程代理遥测与召回图谱，可通过 MCP 查询 Claude Code、Codex、Cursor、OpenCode、Pi 的会话、工具调用、技能和成本数据。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, SurrealDB 存储, 编码代理可观测性与工作流复盘, AGPL-3.0。 |
+| [kerlenton/mcpsnoop](https://github.com/kerlenton/mcpsnoop) | 「MCP 界的 Wireshark」——透明代理，在终端实时显示 AI 客户端（Claude Desktop / Cursor / Claude Code）与 MCP server 之间的每一次真实工具调用。零配置包裹 server 命令即可逐帧查看 JSON-RPC，支持调用重放、能力握手检查、挂起调用检测与过滤查询。 | 社区实现, Go 开发 🏎️, 本地运行 🏠, MCP 流量调试 (TUI), 单一二进制无运行时依赖, MIT。 |
+| [msradam/ocarina](https://github.com/msradam/ocarina) | 面向 MCP server 的自动化测试框架。用 YAML 剧本（rondo）驱动一个或多个真实 server 的工具调用，支持步骤间传值、分支、循环、重试与 `expect` 断言，链路中无需 LLM，每次运行确定可复现且零 token 成本，开箱即可作 CI 健康检查。 | 社区实现, Go 开发 🏎️, 本地运行 🏠, MCP 确定性测试/自动化 (YAML), MIT。 |
 
 
 ---
@@ -846,6 +848,7 @@ MCP 客户端是 AI 的“操作台”，以下是几个热门选择：
 | [AgentShield](https://github.com/elliotllliu/agent-shield) | AI Agent 技能、MCP 服务器和插件安全扫描器。30 条检测规则，支持 AST 污点追踪、跨文件数据流分析、杀伤链检测、8 语言提示注入检测（中/日/韩/俄/阿/西/法/德）。零安装 (npx)，100% 离线运行。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 跨平台 🍎🪟🐧, AI Agent 安全扫描。 |
 | [abluva-research/mcp-trust-plane](https://github.com/abluva-research/mcp-trust-plane) | 面向 MCP 的可组合数据安全平面，采集 / 分析 / 防护分层可插拔，覆盖 50+ 企业数据源，为 AI 访问企业数据提供统一的信任与防护层。 | 社区实现, JavaScript 开发 📇, 数据安全平面, 50+ 企业数据源, Apache 2.0。 |
 | [badchars/darknet-mcp-server](https://github.com/badchars/darknet-mcp-server) | 面向安全研究的暗网与威胁情报聚合 MCP 服务器，66 个工具整合 16 个数据源（HIBP 泄露库、ThreatFox/abuse.ch、勒索软件追踪、Tor .onion 访问、恶意软件分析、区块链取证、漏洞与窃密日志检索），让 AI 在一次调用中完成跨平台情报关联。 | 社区实现, TypeScript 开发 📇, 本地运行 🏠, 暗网与威胁情报聚合 (66 工具/16 源), MIT。 |
+| [EASYHOME-DOORVERSE/dw-mcp-ai-permission-center](https://github.com/EASYHOME-DOORVERSE/dw-mcp-ai-permission-center) | 基于标准 RBAC 的企业级 MCP AI 工具权限管控中台，为 Cursor、Claude Desktop 及自研 Agent 提供统一接入鉴权、按角色的动态工具列表与多数据源数据访问隔离。内置 JDBC/HTTP 接口代理，可将 SQL 与业务接口一键转为 MCP 工具，JWT + API Key 双通道认证。 | 社区实现, Java 开发 ☕, 本地/云端 🏠☁️, MCP 权限管控 (RBAC), Spring AI + Vue3, Apache 2.0。 |
 
 ---
 
